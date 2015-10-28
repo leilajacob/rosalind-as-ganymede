@@ -38,5 +38,27 @@
 	<div class = "container">
 	<%= yield %>
 
+	      <div class="row">
+        <div class="col-md-5">
+          <p id="copy" class="text-right">&copy 2015 Leila Jacob</p>
+        </div>
+        <div class="col-md-2">
+          <ul class="nav nav-pills">
+            <li class="text-center"><%= link_to "Contact", contact_path %></li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <p id="follow" class="text-left"><a href="#">Follow <span class="glyphicon glyphicon-heart-empty"></span></a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
 </body>
 </html>

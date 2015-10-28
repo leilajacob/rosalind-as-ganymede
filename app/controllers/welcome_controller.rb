@@ -15,6 +15,7 @@ class WelcomeController < ApplicationController
   end
 
   def gallery
+    @gallery_images = ["boy.jpg","doc1.jpg","stained-glass.jpg","f-trees.jpg","ghost.jpg","armchair.jpg","balloon.jpg"]
   end
 
   def knitting

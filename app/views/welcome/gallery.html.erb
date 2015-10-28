@@ -1,2 +1,14 @@
-<h1>Welcome#gallery</h1>
-<p>Find me in app/views/welcome/gallery.html.erb</p>
+<div class="jumbotron">
+	<h1>Gallery</h1>
+</div>
+<%= image_tag "frames.psd", class: "img-responsive" %>
+<div class="row">
+	<%= @gallery_images.shuffle.each do |image| %>
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-body"><%= image_tag image, class: "img-responsive" %></div>
+		</div>
+	</div>
+	<% end %>
+</div>
+
