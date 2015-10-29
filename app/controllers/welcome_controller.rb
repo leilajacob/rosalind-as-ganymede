@@ -1,5 +1,12 @@
 class WelcomeController < ApplicationController
   def index
+    @my_blog_posts = Destination.select(:country).order(:country).distinct
+    
+    if params[:country] == nil
+      @destinations = Destination.all
+    else
+      @destinations = Destination.where(country: params[:country].titleize)
+    end
   end
 
   def about
@@ -9,6 +16,7 @@ class WelcomeController < ApplicationController
   end
 
   def blog
+    @blog_posts
   end
 
   def podcasts

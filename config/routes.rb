@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blogs
   root 'welcome#index'
 
   get 'about' => 'welcome#about'
