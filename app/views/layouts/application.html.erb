@@ -23,13 +23,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Blog", blog_path %></li>
+        <li><%= link_to "Blog Posts", blogs_path %></li>
         <li><%= link_to "Podcasts", podcasts_path %></li>
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Contact", contact_path %></li>
         <li><%= link_to "Gallery", gallery_path %></li>
         <li><%= link_to "Knitting", knitting_path %></li>
-        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -38,21 +37,15 @@
 	<div class = "container">
 	<%= yield %>
 
-	      <div class="row">
-        <div class="col-md-5">
-          <p id="copy" class="text-right">&copy 2015 Leila Jacob</p>
-        </div>
-        <div class="col-md-2">
-          <ul class="nav nav-pills">
-            <li class="text-center"><%= link_to "Contact", contact_path %></li>
-          </ul>
-        </div>
-        <div class="col-md-5">
-          <p id="follow" class="text-left"><a href="#">Follow <span class="glyphicon glyphicon-heart-empty"></span></a></p>
-        </div>
-      </div>
-    </div>
+  <footer>
+  <div class='container'>
+    <ul class="nav nav-pills">
+    </ul>
+  </div>
+</footer>
+<script src='//railsgirls.com/assets/bootstrap.js'></script>
 
+      
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

@@ -6,13 +6,15 @@ Rails.application.routes.draw do
 
   get 'contact' => 'welcome#contact'
 
-  get 'blog' => 'welcome#blog'
+  get 'welcome/blog'
 
   get 'podcasts' => 'welcome#podcasts'
 
   get 'gallery' => 'welcome#gallery'
 
   get 'knitting' => 'welcome#knitting'
+
+  get 'lj007670' => 'blogs#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

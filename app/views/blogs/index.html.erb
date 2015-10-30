@@ -1,29 +1,36 @@
-<p id="notice"><%= notice %></p>
+<% if notice != nil %>
+  <div class="alert alert-danger" role="alert">
+   <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
 
 <h1>Listing Blogs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div class="row">
     <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="col-md-4">
+        <div class="panel panel-success">
+          <div class="panel heading"><h2><%= blog.title %></h2></div>
+          <div class="panel body">
+            <% if blog.avatar_file_name != nil %>
+            <p><%= image_tag blog.avatar.url(:thumb) %></p>
+          <% else %>
+          <% if blog.avatar_file_name != nil %>
+   <%= image_tag blog.avatar.url(:medium), class: "img-responsive" %>
+            <p><%= image_tag "missing-dest-image.png" %></p>
+            <% end %>
+          <% end %>
+            <p><%= blog.body[0..250] %></p>
+            <p><%= link_to "READ MORE", blog %></P>
+          </div>
+          <div class="panel footer">
+          <%= link_to 'Show', blog %>
+          <%= link_to 'Edit', edit_blog_path(blog) %>
+          <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
+  </div>
 
 <%= link_to 'New Blog', new_blog_path %>
