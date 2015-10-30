@@ -5,6 +5,9 @@
   <%= @blog.title %>
 </p>
 
+<p> <%= image_tag @blog.avatar.url(:medium) %></p>
+
+
 <p>
   <strong>Body:</strong>
   <%= @blog.body %>

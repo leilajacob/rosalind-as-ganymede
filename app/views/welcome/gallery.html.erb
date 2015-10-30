@@ -1,14 +1,9 @@
-<div class="jumbotron">
-	<h1>Gallery</h1>
-</div>
-
 <div class="row">
 	<%= @gallery_images.shuffle.each do |image| %>
 	<div class="col-md-6">
-		<div class="panel panel-default">
+		<div id="panel" class="table responsive">
 			<div class="panel-body"><%= image_tag image, class: "img-responsive" %></div>
 		</div>
 	</div>
 	<% end %>
 </div>
-
